@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="377.0" prefWidth="480.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.FeesRecordController">
+    <stylesheets>
+        <URL value="@/tladatabase/Css/feesrecord.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="7.0" prefHeight="149.0" prefWidth="466.0" styleClass="firstPane-AnchorPane" stylesheets="@../Css/feesrecord.css">
+         <children>
+            <Text layoutX="14.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="15.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label layoutX="64.0" layoutY="105.0" text="GH" />
+            <Text fx:id="classFees" layoutX="91.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="studentName" layoutX="70.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="13.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="className" layoutX="68.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="10.0" layoutY="165.0" prefHeight="176.0" prefWidth="460.0" styleClass="secondPane-AnchorPane" stylesheets="@../Css/feesrecord.css">
+         <children>
+            <Label layoutX="367.0" layoutY="50.0" text="Cedis" />
+            <Label layoutX="112.0" layoutY="50.0" text="GH" />
+            <TextField fx:id="paidField" editable="false" layoutX="136.0" layoutY="46.0" onMouseClicked="#amountFieldDoubleClicked" prefHeight="25.0" prefWidth="223.0" />
+            <Text layoutX="14.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount Paid :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="14.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Difference :" underline="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Label layoutX="112.0" layoutY="106.0" text="GH" />
+            <Label fx:id="inputErrorMessage" layoutX="191.0" layoutY="28.0" opacity="0.02" text="Wrong Input" textFill="#fc0c0c">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="saveButton" disable="true" layoutX="396.0" layoutY="151.0" mnemonicParsing="false" onAction="#saveButtonInitialized" styleClass="save-Button" text="Save" />
+            <Text fx:id="FeesDifference" layoutX="136.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="closeButton" layoutX="345.0" layoutY="151.0" mnemonicParsing="false" onAction="#closeButtonInitialized" style="-fx-background-radius: 12;" text="Close" />
+            <Button fx:id="calculatorButton" layoutX="14.0" layoutY="15.0" mnemonicParsing="false" onAction="#calculatorInit" prefHeight="25.0" prefWidth="70.0" styleClass="calculator-Button" stylesheets="@../Css/feesrecord.css" text="Calculator" />
+            <Label layoutX="156.0" layoutY="68.0" text="double click to edit field" textFill="#0023eb">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Reflection fraction="0.17" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

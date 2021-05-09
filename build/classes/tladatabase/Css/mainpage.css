@@ -1,0 +1,65 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+   -fx-fill: transparent;
+}
+.smallPane-anchorPane{
+     -fx-background-color:  linear-gradient(lightgray, gray);
+    -fx-border-color: white;
+    -fx-border-radius: 20;
+    -fx-padding: 10 10 10 10;
+    -fx-background-radius: 20;
+}
+
+.anchor-second{
+    -fx-background-color: grey;
+
+    -fx-background-image:  url(../Images/spots.jpg);
+}
+
+.anchor-asMenubar2{
+    -fx-background-color:  black;
+}
+
+.search-field{
+    -fx-background-radius: 100;
+}
+.newStudent-Button{
+    -fx-background-size: 45;
+    -fx-background-color: black;
+    -fx-background-image: url(../Images/new_Student.png);
+
+}
+
+.newclass-Button{
+
+    -fx-background-size: 50;
+    -fx-background-color: black;
+    -fx-background-image: url(../Images/newClass.png);
+}
+
+.sms-button{
+    -fx-background-size: 45;
+    -fx-background-color: black;
+    -fx-background-image: url(../Images/sms_icon.jpg);
+
+}
+.calculator-button{
+    -fx-background-size: 45;
+    -fx-background-color: black;
+    -fx-background-image: url(../Images/calculator.png);
+
+}
+
+.floor-stackPane{
+   
+}
+.pane-TabPane{
+    -fx-background-image: url(../Images/TLALogo.png);
+    -fx-background-position: center center;
+    -fx-background-repeat: stretch; 
+    -fx-background-color: transparent;
+    -fx-background-size: 300;
+}

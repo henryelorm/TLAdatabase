@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="93.0" prefWidth="363.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+    <stylesheets>
+        <URL value="@/tladatabase/Css/progressreportcustomize.css" />
+    </stylesheets>
+   <children>
+      <ProgressBar layoutX="31.0" layoutY="35.0" prefHeight="18.0" prefWidth="302.0" progress="0.0" />
+   </children>
+</AnchorPane>

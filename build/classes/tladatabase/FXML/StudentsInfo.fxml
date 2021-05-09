@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="443.0" prefWidth="722.0" stylesheets="@../Css/studentsinfo.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.StudentsInfoController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="410.0" prefWidth="395.0" styleClass="anchorPane">
+         <children>
+            <Label layoutX="12.0" layoutY="1.0" prefHeight="27.0" prefWidth="65.0" text="Name :" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="nameText" fill="#fffbfb" layoutX="95.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Label layoutX="6.0" layoutY="81.0" prefHeight="20.0" prefWidth="77.0" text="Class :" textFill="#fffefe" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="117.0" prefHeight="27.0" prefWidth="106.0" text="Date of Birth:" textFill="#f8f5f5" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="166.0" prefHeight="20.0" prefWidth="96.0" text="Citizenship :" textFill="#fffdfd" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="212.0" prefHeight="27.0" prefWidth="106.0" text="Hometown :" textFill="#fffdfd" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="8.0" layoutY="257.0" prefHeight="27.0" prefWidth="134.0" text="House Address: " textFill="#fffbfb" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="39.0" prefHeight="20.0" prefWidth="77.0" text="Gender:" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="302.0" prefHeight="27.0" prefWidth="77.0" text="Father :" textFill="WHITE" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="6.0" layoutY="341.0" prefHeight="20.0" prefWidth="106.0" text="Mother :" textFill="#fffefe" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="3.0" layoutY="377.0" prefHeight="27.0" prefWidth="145.0" text="Phone Numbers :" textFill="#f8f4f4" underline="true">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Text fx:id="sexText" fill="WHITE" layoutX="95.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="classText" fill="#fffafa" layoutX="95.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="dobText" fill="WHITE" layoutX="136.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="citizenshipText" fill="#f8f8f8" layoutX="136.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="hometownText" fill="#fffdfd" layoutX="136.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="houseaddressText" fill="#fffbfb" layoutX="159.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="fatherNameText" fill="#fffbfb" layoutX="95.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="motherNameText" fill="WHITE" layoutX="95.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="phonenumbersText" fill="#fcfcfc" layoutX="153.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="421.0" layoutY="7.0" prefHeight="337.0" prefWidth="297.0" styleClass="imagePane-AnchorPane" stylesheets="@../Css/studentsinfo.css">
+         <children>
+            <ImageView fx:id="studentImage" fitHeight="269.0" fitWidth="252.0" layoutX="23.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/PersonImage1.gif" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Reflection fraction="0.28" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

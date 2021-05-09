@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="257.0" prefWidth="500.0" styleClass="main-anchorPane" stylesheets="@../Css/createclass.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.CreateClassController">
+   <children>
+      <AnchorPane layoutX="53.0" layoutY="63.0" prefHeight="150.0" prefWidth="393.0" styleClass="small-anchorPane" stylesheets="@../Css/createclass.css" AnchorPane.bottomAnchor="85.0" AnchorPane.leftAnchor="53.0" AnchorPane.rightAnchor="78.0" AnchorPane.topAnchor="63.0">
+         <children>
+            <Text fill="#171616" layoutX="7.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Class Name :">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <TextField fx:id="newClass_Textfield" layoutX="97.0" layoutY="61.0" prefHeight="25.0" prefWidth="274.0" promptText="Please enter class name" styleClass="className-TextField" stylesheets="@../Css/createclass.css" />
+            <Button fx:id="cancel_Button" layoutX="255.0" layoutY="105.0" mnemonicParsing="false" onAction="#cancelButton_Initialized" styleClass="cancel-Buttons" text="Cancel" />
+            <Button fx:id="finish_Button" layoutX="320.0" layoutY="105.0" mnemonicParsing="false" onAction="#finish_ButtonInitialized" styleClass="finish-Buttons" text="Finish" />
+            <Label fx:id="label" layoutX="117.0" layoutY="34.0" opacity="0.0" prefHeight="17.0" prefWidth="166.0" text="Please Fill Space Correctly" textFill="#f50707">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Reflection fraction="0.46" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

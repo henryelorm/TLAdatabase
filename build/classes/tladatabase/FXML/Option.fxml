@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.embed.swing.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="483.0" prefWidth="384.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.OptionsController">
+    <stylesheets>
+        <URL value="@/tladatabase/Css/options.css" />
+    </stylesheets>
+   <children>
+      <TabPane fx:id="optionsTabpane" layoutX="112.0" layoutY="142.0" prefHeight="508.0" prefWidth="517.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab fx:id="smsTab" text="SMS to Parents">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="454.0" prefWidth="368.0">
+                     <children>
+                        <TextArea fx:id="commentArea" layoutX="14.0" layoutY="180.0" prefHeight="234.0" prefWidth="360.0" stylesheets="@../Css/options.css" />
+                        <Label layoutX="14.0" layoutY="160.0" text="Comments:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="selectClassBox" layoutX="225.0" layoutY="14.0" onMouseClicked="#classSelectionForSms" prefHeight="25.0" prefWidth="145.0" promptText="Select Class " styleClass="selectClass-ComboBox" stylesheets="@../Css/options.css" />
+                        <Label layoutX="307.0" layoutY="160.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="sendButton" layoutX="313.0" layoutY="421.0" mnemonicParsing="false" onAction="#sendButtonInitialized" prefHeight="25.0" prefWidth="61.0" styleClass="send-Button" stylesheets="@../Css/options.css" text="Send" />
+                        <Button fx:id="cancelButton" layoutX="245.0" layoutY="421.0" mnemonicParsing="false" onAction="#cancelInitialized" prefHeight="25.0" prefWidth="62.0" styleClass="cancel-Button" stylesheets="@../Css/options.css" text="Cancel" />
+                        <TextField fx:id="connStatusField" editable="false" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="154.0" styleClass="connStatus-TextField" stylesheets="@../Css/options.css" />
+                        <Label layoutX="14.0" layoutY="105.0" text="Connection Status:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="48.0" text="Modem Found:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="modemManufac" editable="false" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="154.0" styleClass="simNumber-TextField" stylesheets="@../Css/options.css" />
+                        <Button layoutX="13.0" layoutY="421.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" styleClass="load-previosM" stylesheets="@../Css/options.css" text="load previous message" textFill="#fffcfc" />
+                        <ComboBox fx:id="availableports" layoutX="16.0" layoutY="14.0" onMouseClicked="#availablePortsIntance" prefHeight="25.0" prefWidth="151.0" promptText="Select a Port" styleClass="selectClass-ComboBox" stylesheets="@../Css/options.css" />
+                        <Separator layoutX="212.0" layoutY="4.0" orientation="VERTICAL" prefHeight="170.0" prefWidth="7.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="promDemotionTab" text="Class Promotion">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="cancelProDemo" layoutX="314.0" layoutY="415.0" mnemonicParsing="false" onAction="#cancelInitialized" onMouseEntered="#promotion_ButtonEntered" onMouseExited="#promotion_ButtonExited" prefHeight="23.0" prefWidth="60.0" text="Cancel" />
+                        <Button fx:id="promoteClassButton" layoutX="72.0" layoutY="365.0" mnemonicParsing="false" onAction="#promotion_ButtonInitialized" prefHeight="25.0" prefWidth="218.0" styleClass="classPromotion-Button" stylesheets="@../Css/options.css" text="Click Here to promote Students " />
+                        <Separator layoutX="10.0" layoutY="404.0" prefHeight="4.0" prefWidth="364.0" />
+                        <Label layoutX="14.0" layoutY="76.0" text="Class Promotion" underline="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <TextArea editable="false" layoutX="14.0" layoutY="155.0" prefHeight="72.0" prefWidth="227.0" styleClass="classPromotion-TextArea" stylesheets="@../Css/options.css" text="This section is meant to PROMOTE &#10;all students in a particular class to a &#10;higher level/class.&#10;&#10;" />
+                        <Label layoutX="19.0" layoutY="131.0" text="tip." />
+                        <Button fx:id="undoClassPromotionButton" layoutX="223.0" layoutY="14.0" mnemonicParsing="false" onAction="#undoClassPromotion_ButtonInitialized" onMouseEntered="#undoClassPromotion_ButtonEntered" onMouseExited="#undoClassPromotion_ButtonExited" prefHeight="27.0" prefWidth="149.0" styleClass="classDemotion-Button" stylesheets="@../Css/options.css" text="Undo Class Promotion" />
+                        <Separator layoutX="10.0" layoutY="59.0" prefHeight="4.0" prefWidth="364.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="School Fees">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tableFees" editable="true" layoutX="6.0" layoutY="21.0" prefHeight="407.0" prefWidth="384.0" AnchorPane.bottomAnchor="26.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="21.0">
+                          <columns>
+                            <TableColumn fx:id="classesColumn" maxWidth="200.0" minWidth="177.0" prefWidth="177.0" text="CLASS" />
+                            <TableColumn fx:id="feesColumn" maxWidth="250.0" minWidth="150.0" prefWidth="202.0" text="FEES (GH CEDI)" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="closeFees" layoutX="327.0" layoutY="428.0" mnemonicParsing="false" onAction="#closeFeesButtonInitialized" prefHeight="20.0" prefWidth="57.0" text="Close" />
+                        <Text layoutX="196.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Double click Fees Column to edit" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Set Password">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <PasswordField fx:id="passwordField1" layoutX="151.0" layoutY="145.0" prefHeight="25.0" prefWidth="211.0" />
+                        <TextField fx:id="userId" layoutX="73.0" layoutY="26.0" prefHeight="25.0" prefWidth="228.0" />
+                        <Text layoutX="14.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Id:">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="passText1" layoutX="12.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Password :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="passText2" layoutX="14.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="passwordField2" layoutX="159.0" layoutY="221.0" prefHeight="25.0" prefWidth="206.0" />
+                        <Text fx:id="passText3" layoutX="15.0" layoutY="313.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <PasswordField fx:id="passwordField3" layoutX="159.0" layoutY="295.0" prefHeight="25.0" prefWidth="205.0" />
+                        <Separator layoutX="8.0" layoutY="101.0" prefHeight="10.0" prefWidth="368.0" />
+                        <Separator layoutX="3.0" layoutY="194.0" prefHeight="10.0" prefWidth="368.0" />
+                        <Separator layoutX="5.0" layoutY="264.0" prefHeight="10.0" prefWidth="368.0" />
+                        <Separator layoutX="3.0" layoutY="342.0" prefHeight="10.0" prefWidth="368.0" />
+                        <Button fx:id="okPassword" layoutX="313.0" layoutY="420.0" mnemonicParsing="false" onAction="#okButtonInitialize" prefHeight="25.0" prefWidth="58.0" text="Ok" />
+                        <Button fx:id="cancelPassword" layoutX="240.0" layoutY="420.0" mnemonicParsing="false" onAction="#cancelInitialized" prefHeight="25.0" prefWidth="62.0" text="Cancel" />
+                        <Label fx:id="passLabel1" layoutX="161.0" layoutY="128.0" opacity="0.0" text="Wrong Password" textFill="RED" />
+                        <Label fx:id="userIdLabel" layoutX="133.0" layoutY="6.0" opacity="0.0" text="No User Id" textFill="RED" />
+                        <Label fx:id="passLabel2" layoutX="161.0" layoutY="204.0" opacity="0.0" text="Wrong Password" textFill="RED" />
+                        <Label fx:id="passLabel3" layoutX="161.0" layoutY="274.0" opacity="0.0" text="Wrong Password" textFill="RED" />
+                        <Button fx:id="removePassword" layoutX="4.0" layoutY="420.0" mnemonicParsing="false" onAction="#removePasswordInit" text="Remove Password" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="723.0" prefWidth="1132.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.MainPageController">
+    <stylesheets>
+        <URL value="@/tladatabase/Css/mainpage.css" />
+    </stylesheets>
+   <children>
+      <MenuBar layoutY="-1.0" prefHeight="30.0" prefWidth="939.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="newstudent_Item" mnemonicParsing="false" onAction="#newStudent_ButtonInitialized" text="New Student" />
+                  <MenuItem fx:id="item_newClass" mnemonicParsing="false" onAction="#newClass_ItemInitialized" text="New Class" />
+                  <MenuItem fx:id="options" mnemonicParsing="false" onAction="#sms_ButtonInitialized" text="Option" />
+              <MenuItem fx:id="item_Close" mnemonicParsing="false" onAction="#close_ItemInitialized" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <MenuItem fx:id="editClass" mnemonicParsing="false" onAction="#editClassNameInitialized" text="Edit Class Name " />
+                  <MenuItem fx:id="deleteClass" mnemonicParsing="false" onAction="#deleteClassInitialized" text="Delete Class" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="View">
+              <items>
+                  <MenuItem fx:id="classInfo" mnemonicParsing="false" onAction="#classInfoInitialize" text="Class Info" />
+                <MenuItem fx:id="archive" mnemonicParsing="false" onAction="#archiveInitialize" text="Archive" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutY="26.0" prefHeight="669.0" prefWidth="939.0" styleClass="anchor-second" stylesheets="@../Css/mainpage.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="26.0">
+         <children>
+            <ListView fx:id="searchView" layoutY="49.0" onMouseClicked="#listViewStudentListener" opacity="0.7" prefHeight="648.0" prefWidth="182.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="49.0" />
+            <AnchorPane layoutY="-1.0" opacity="0.97" prefHeight="50.0" prefWidth="1132.0" styleClass="anchor-asMenubar2" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <TextField fx:id="searchField" layoutX="7.0" layoutY="10.0" minHeight="10.0" prefHeight="25.0" prefWidth="168.0" promptText="Search Student" styleClass="search-field" />
+                  <Button fx:id="newStudent" layoutX="202.0" layoutY="1.0" mnemonicParsing="false" onAction="#newStudent_ButtonInitialized" onMouseEntered="#newStudent_ButtonEntered" onMouseExited="#newStudent_ButtonExited" prefHeight="44.0" prefWidth="44.0" styleClass="newStudent-Button">
+                     <tooltip>
+                        <Tooltip text="New Student" textOverrun="CLIP">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Tooltip>
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="newClass" layoutX="265.0" layoutY="1.0" mnemonicParsing="false" onAction="#newClass_ItemInitialized" onMouseEntered="#newClass_ButtonEntered" onMouseExited="#newClass_ButtonExited" prefHeight="44.0" prefWidth="51.0" styleClass="newclass-Button">
+                     <tooltip>
+                        <Tooltip text="Create New Class" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="smsButton" layoutX="341.0" layoutY="4.0" mnemonicParsing="false" onAction="#sms_ButtonInitialized" onMouseEntered="#sms_ButtonEntered" onMouseExited="#sms_ButtonExited" prefHeight="38.0" prefWidth="44.0" styleClass="sms-button">
+                     <tooltip>
+                        <Tooltip text="Send SMS to Parents" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="calculator" layoutX="408.0" layoutY="3.0" mnemonicParsing="false" onAction="#calculator_ButtonInitialized" onMouseEntered="#calculator_ButtonEntered" onMouseExited="#calculator_ButtonExited" prefHeight="44.0" prefWidth="44.0" styleClass="calculator-button">
+                     <tooltip>
+                        <Tooltip text="Calculator" />
+                     </tooltip></Button>
+               </children>
+            </AnchorPane>
+            <Separator layoutX="182.0" layoutY="3.0" orientation="VERTICAL" prefHeight="697.0" prefWidth="0.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="2.0" />
+            <StackPane fx:id="floorPane" layoutX="184.0" layoutY="49.0" prefHeight="648.0" prefWidth="949.0" styleClass="floor-stackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="183.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="49.0">
+               <children>
+                  <TabPane fx:id="tabPane" prefHeight="648.0" prefWidth="702.0" styleClass="pane-TabPane" tabClosingPolicy="UNAVAILABLE">
+                     <effect>
+                        <DropShadow />
+                     </effect></TabPane>
+               </children></StackPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

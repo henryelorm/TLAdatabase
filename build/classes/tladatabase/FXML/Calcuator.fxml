@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="461.0" prefWidth="356.0" styleClass="mainFxmlClass" stylesheets="@../Css/calcuator.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.CalcuatorController">
+   <children>
+      <AnchorPane layoutX="7.0" layoutY="14.0" prefHeight="441.0" prefWidth="339.0" styleClass="small-anchorPane" stylesheets="@../Css/calcuator.css">
+         <children>
+            <HBox layoutX="10.0" layoutY="136.0" prefHeight="64.0" prefWidth="308.0" spacing="15.0" styleClass="hbox" stylesheets="@../Css/calcuator.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="7">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="8">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="9">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleOPeration" prefHeight="64.0" prefWidth="67.0" styleClass="orangeButtons" text="*" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="208.0" prefHeight="64.0" prefWidth="308.0" spacing="15.0" styleClass="hbox" stylesheets="@../Css/calcuator.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="4">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="6">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleOPeration" prefHeight="64.0" prefWidth="67.0" styleClass="orangeButtons" text="/" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Button>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="285.0" prefHeight="64.0" prefWidth="308.0" spacing="15.0" styleClass="hbox" stylesheets="@../Css/calcuator.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="1">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="twoButton" mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="2">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text="3">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleOPeration" prefHeight="64.0" prefWidth="67.0" styleClass="orangeButtons" text="-" textFill="#fffbfb">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox layoutX="11.0" layoutY="355.0" prefHeight="64.0" prefWidth="308.0" spacing="15.0" styleClass="hbox" stylesheets="@../Css/calcuator.css">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" style="-fx-background-radius: 0 0 0 25;" text="0">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleDigitAction" prefHeight="64.0" prefWidth="67.0" text=".">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#equalButtonInit" prefHeight="64.0" prefWidth="67.0" styleClass="greenButtons" text="=" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#handleOPeration" prefHeight="64.0" prefWidth="67.0" style="-fx-background-radius: 0 0 25 0;" styleClass="orangeButtons" text="+" textFill="WHITE">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <VBox layoutX="14.0" layoutY="12.0" prefHeight="74.0" prefWidth="300.0">
+               <children>
+                  <TextField fx:id="field" editable="false" prefHeight="58.0" prefWidth="300.0" styleClass="textField">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </VBox>
+            <Button layoutX="254.0" layoutY="95.0" mnemonicParsing="false" onAction="#clearButtonInit" prefHeight="33.0" prefWidth="66.0" style="-fx-background-radius: 0 12 0 0;" styleClass="clear-button" text="CLEAR" />
+         </children>
+         <effect>
+            <Reflection fraction="0.07" />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

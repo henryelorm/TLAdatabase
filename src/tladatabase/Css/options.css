@@ -1,0 +1,60 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+
+.simNumber-TextField{
+    -fx-background-radius: 20;
+}
+
+.simNumber-Button{
+    -fx-background-radius: 20;
+}
+
+.connStatus-TextField{
+    -fx-background-radius: 20;
+}
+
+.selectClass-ComboBox{
+    -fx-background-radius: 20;
+}
+
+.send-Button{
+    -fx-background-radius: 20;
+    
+}
+
+.cancel-Button{
+    -fx-background-radius: 20;
+}
+
+.load-previosM{
+    -fx-background-color: black;
+    -fx-background-radius: 1;
+}
+
+.classDemotion-TextArea{
+    
+    -fx-border-color: black;
+    -fx-background-color: navy;
+}
+
+.classDemotion-Button{
+    -fx-background-color: grey;
+    -fx-border-color: black;
+}
+
+.classPromotion-TextArea{
+    
+    -fx-background-color: black;
+}
+
+.classPromotion-Button{
+    
+    
+    -fx-border-color: black;
+}

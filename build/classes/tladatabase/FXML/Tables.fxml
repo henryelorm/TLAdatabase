@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" maxWidth="1.7976931348623157E308" prefHeight="653.0" prefWidth="948.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tladatabase.Controllers.TablesController">
+    <stylesheets>
+        <URL value="@/tladatabase/Css/tables.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tableViews" layoutX="78.0" layoutY="92.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+            <TableColumn fx:id="number" editable="false" maxWidth="80.0" minWidth="30.0" prefWidth="50.0" sortable="false" text="#" />
+            <TableColumn fx:id="lastName" maxWidth="300.0" minWidth="150.0" prefWidth="200.0" text="Last Name" />
+            <TableColumn fx:id="firstName" maxWidth="300.0" minWidth="150.0" prefWidth="200.0" text="First Name" />
+          <TableColumn fx:id="otherName" maxWidth="300.0" minWidth="150.0" prefWidth="200.0" text="Other Names" />
+          <TableColumn fx:id="ppN" maxWidth="500.0" minWidth="180.0" prefWidth="272.0" sortable="false" text="Parent's Phone No." />
+        </columns>
+         <contextMenu>
+            <ContextMenu fx:id="contextMenu">
+              <items>
+                <MenuItem fx:id="studentsInfo" mnemonicParsing="false" onAction="#studentsInfoInitialized" text="Check Student's Info" />
+                  <MenuItem fx:id="feesCheck" mnemonicParsing="false" onAction="#feesCheckInitialize" text="Check Student's Fees" />
+                  <MenuItem fx:id="editStudent" mnemonicParsing="false" onAction="#editStudentInitialized" text="Edit Student's Info" />
+                  <MenuItem fx:id="deleteStudent" mnemonicParsing="false" onAction="#deleteStudentInitialized" text="Delete Student" />
+                  <MenuItem fx:id="sendSMS" mnemonicParsing="false" onAction="#sendSMSInitialized" text="Send SMS to Parent" />
+                  <MenuItem fx:id="promoteStudent" mnemonicParsing="false" onAction="#promoteStudent_MenuItemInit" text="Promote Student" />
+                  <MenuItem fx:id="demoteStudent" mnemonicParsing="false" onAction="#demoteStudent_MenuItemInit" text="Demote Student" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TableView>
+   </children>
+</AnchorPane>

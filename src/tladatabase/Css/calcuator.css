@@ -1,0 +1,34 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+  -fx-background-color: #0099FF;
+}
+.hbox{
+    -fx-background-color:black; 
+}
+.orangeButtons{
+    -fx-background-color:orange; 
+}
+
+.greenButtons{
+    -fx-background-color:lime;
+}
+
+.small-anchorPane{
+    
+-fx-background-color:black;
+-fx-background-radius: 25;
+-fx-padding: 10;
+}
+
+.textField{
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.clear-button{
+    
+    -fx-background-color: greenyellow;
+}
